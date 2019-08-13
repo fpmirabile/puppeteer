@@ -3,11 +3,8 @@ node_js:
   - '8'
 before_script:
   - yarn install
-  # - yarn build-css
-# script:
-  # - yarn test
 before_deploy:
-  - yarn build #; cp Staticfile ./build/;
+  - yarn build
 deploy:
   - provider: cloudfoundry
     api: https://api.run.pivotal.io
@@ -19,4 +16,3 @@ deploy:
     on:
       repo: fpmirabile/puppeteer
       branch: master
-      
