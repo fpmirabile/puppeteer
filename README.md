@@ -20,6 +20,9 @@ Runs the first scrapping example about getting github repo page information.
 
 Runs the first scrapping example about getting RottenTomatoes page information.
 
+### `node lighthouse/run_tests.js`
+Runs Lighthouse audits on the root of the pokedex project and the pokemon detail page. You need to have the project running.
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.<br>
