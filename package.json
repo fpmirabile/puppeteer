@@ -22,8 +22,8 @@
     "eject": "react-scripts eject",
     "e2e": "npm run e2e:jasmine",
     "e2e:jasmine": "npx jasmine automation/*.js",
-    "scrapping:start": "node scrapping/index.js",
-    "scrapping:example2": "node scrapping/example2.js"
+    "scrapping:github": "node scrapping/github.js",
+    "scrapping:rottentomatoes": "node scrapping/rottentomatoes.js"
   },
   "eslintConfig": {
     "extends": "react-app"
