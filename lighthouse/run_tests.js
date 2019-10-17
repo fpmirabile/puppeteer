@@ -89,28 +89,28 @@ const fs = require('fs');
   await chrome.kill();
 
   //Write report html to the file
-  fs.writeFile('report.html', html, (err) => {
+  fs.writeFile('lighthouse/report.html', html, (err) => {
     if (err) {
       console.error(err);
     }
   });
 
   //Write report json to the file
-  fs.writeFile('report.json', json, (err) => {
+  fs.writeFile('lighthouse/report.json', json, (err) => {
     if (err) {
       console.error(err);
     }
   });
 
   //Write report html to the file
-  fs.writeFile('detail-report.html', detailhtml, (err) => {
+  fs.writeFile('lighthouse/detail-report.html', detailhtml, (err) => {
     if (err) {
       console.error(err);
     }
   });
 
   //Write report json to the file
-  fs.writeFile('detail-report.json', detailjson, (err) => {
+  fs.writeFile('lighthouse/detail-report.json', detailjson, (err) => {
     if (err) {
       console.error(err);
     }
