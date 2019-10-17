@@ -38,12 +38,15 @@ class CardListComponent extends React.Component {
   }
 
   filter = () => {
-    const pokemonsFiltered = this.props.pokemons
-      .filter(
+    var pokemonsFiltered = this.props.pokemons
+
+    if (this.state.pokemon) {
+      pokemonsFiltered = pokemonsFiltered.filter(
         pokemon =>
           this.state.pokemon &&
           ( pokemon.id === this.state.pokemon ||
             pokemon.name.toLowerCase().indexOf(this.state.pokemon.toLowerCase()) >= 0));
+    }
 
     this.setState({pokemonsFiltered});
   }
@@ -69,6 +72,7 @@ class CardListComponent extends React.Component {
       .then(jsonData => {
         jsonData.results.forEach(elem => elem.id = elem.url.match(/\/(\d+)\//)[0].replace(/\//gi,''))
         this.props.getPokemonsSuccess(jsonData.results);
+        this.filter();
       })
       .catch(error => this.props.getPokemonsFail(error));
   }
