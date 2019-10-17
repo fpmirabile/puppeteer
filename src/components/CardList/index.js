@@ -55,7 +55,7 @@ class CardListComponent extends React.Component {
   render() {
     return (
       <div style={useStyles.root}>
-        {this.props.loading ? 
+        {this.props.loading ?
           <CircularProgress /> :
           this.showList()}
       </div>)
@@ -69,6 +69,11 @@ class CardListComponent extends React.Component {
       .then(jsonData => {
         jsonData.results.forEach(elem => elem.id = elem.url.match(/\/(\d+)\//)[0].replace(/\//gi,''))
         this.props.getPokemonsSuccess(jsonData.results);
+
+    // let { query } = useParams();
+    // if (query) {
+      this.onChange('a');
+    // }
       })
       .catch(error => this.props.getPokemonsFail(error));
   }

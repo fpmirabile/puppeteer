@@ -13,7 +13,7 @@ export default class Search extends React.Component {
   handleKeyDown = (e) => {
     if (e.key === 'Enter') {
       this.props.onChange(this.state.value);
-    } 
+    }
   }
 
   render() {

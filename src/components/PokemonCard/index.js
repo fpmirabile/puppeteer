@@ -25,7 +25,7 @@ export default class PokemonCard extends React.Component {
 
     return (
       <Link to={`/${this.props.data.id}`} style={{textDecoration: 'none'}}>
-        <Card style={useStyles.card}>
+        <Card id={`pokemon-number-${this.props.data.id}`} style={useStyles.card}>
           <CardActionArea>
             <CardMedia
               style={useStyles.media}
