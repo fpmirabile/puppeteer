@@ -58,7 +58,7 @@ class CardListComponent extends React.Component {
   render() {
     return (
       <div style={useStyles.root}>
-        {this.props.loading ? 
+        {this.props.loading ?
           <CircularProgress /> :
           this.showList()}
       </div>)

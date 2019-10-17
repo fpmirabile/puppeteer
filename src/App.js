@@ -13,6 +13,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route path="/:id" component={Detail}/>
+            <Route path="/list/:query" component={CardList}/>
             <Route component={CardList}/>
           </Switch>
         </div>
